@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction;
 using Unity.XR.CoreUtils;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -57,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDash(InputAction.CallbackContext obj)
     {
-        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 camForward = Camera.main.transform.forward; //Grabs poisiton of the camera's forward direction
         if (!IsGrounded)
         {
             return;
